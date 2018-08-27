@@ -1,0 +1,44 @@
+.flex-parent  {
+    display: flex;
+    background-color: aquamarine;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex-parent > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#c1 {
+    background-color: rgb(250, 32, 195);
+}
+
+#c2 {
+    background-color: chocolate;
+}
+
+#c3 {
+    background-color: darkcyan;
+}
+
+#c4 {
+    background-color: darkgreen;
+}
+
+#c5 {
+    background-color: darkorange;
+}
+
+#img {
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
+}
+
+#txt-adjust {
+    font-size: 10vw;
+}
