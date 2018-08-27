@@ -1,3 +1,12 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    left: 3%;
+    top: 30px;
+    border : 2px solid red;
+}
+
 .flex-parent  {
     display: flex;
     background-color: aquamarine;
@@ -34,11 +43,11 @@
 }
 
 #img {
-    /* width: 100%; */
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
 
 #txt-adjust {
-    font-size: 10vw;
+    font-size: 5vw;
 }
