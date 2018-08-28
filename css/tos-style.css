@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+header {
+  top: 0;
+  left: 0;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding : 3px;
+  flex: none;
+  position: sticky;
+  background-color: royalblue;
+}
+.web-logo {
+  flex: 2;
+  font-size: 40px;
+  align-self: flex-start;
+}
+
+.navbar {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex: 6;
+}
+@media screen and (max-width: 660px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}

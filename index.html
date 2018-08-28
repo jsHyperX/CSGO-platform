@@ -5,7 +5,7 @@
     <head>
         <title> firiCSGOskins </title>
         <meta name="viewport" content="width=device-width,initila-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index-style.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/handlers.js"></script>
@@ -19,11 +19,12 @@
                     <i class="fas fa-dice"></i>
                 </nav>
                 <nav class="navbar">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#affiliates"> Affiliates </a>
-                    <a href="#provably"> Provably Fair </a>
-                    <a href="#FAQ"> FAQ </a>
-                    <a href="#support"> support </a>
+                    <a class="active" onclick="redirect2home()">Home</a>
+                    <a onclick="redirect2affiliates()"> Affiliates </a>
+                    <a onclick="redirect2provably()"> Provably Fair </a>
+                    <a onclick="redirect2faq()"> FAQ </a>
+                    <a onclick="redirect2support()"> Support </a>
+                    <a onclick="redirect2tos()"> Terms Of services </a>
                 </nav>
             </header>
 
@@ -42,20 +43,20 @@
                 <nav class="flex-parent">
                     <nav id="c1"> 
                         <nav class="black">
-                            <img id="logo1" src='./assets/black.jpg' alt="black" />
+                            <img id="logo1" src='./favicon/black.jpg' alt="black" />
                             <p style="text-align: center"> Win 2x</p>
                             <!-- <p><button class="black-bet"></button></p> -->
                         </nav>
                     </nav>
                     <nav id="c2">
                         <nav class="green">
-                            <img id="logo2" src="./assets/green.jpg" alt="green" />
+                            <img id="logo2" src="./favicon/green.jpg" alt="green" />
                             <p style="text-align: center"> Win 14x</p>
                         </nav>
                     </nav>
                     <nav id="c3">
                         <nav class="red">
-                                <img id="logo3" src="./assets/red.png" alt="red" />
+                                <img id="logo3" src="./favicon/red.png" alt="red" />
                                 <p style="text-align: center"> Win 2x</p>
                         </nav>
                     </nav>
