@@ -1,3 +1,3 @@
 function redirect2steam() {
-    window.location = "https://steam.com/login.html";
+    window.location = "https://store.steampowered.com/login/";
 }
