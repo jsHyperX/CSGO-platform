@@ -70,7 +70,7 @@ a:hover:not(.active) {
 }
 
 .hero-image {
-  opacity: 0.95;
+  /* opacity: 0.95; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/home/cgi/workspaces/respWeb/assets/gambling intro.jpg");
   height: 100%;
   background-position: center;
@@ -104,7 +104,7 @@ a:hover:not(.active) {
 .flex-parent {
   min-height: 50vh;
   position: relative;
-  background-color: rgba(195, 204, 204, 0.432);
+  background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -135,7 +135,7 @@ a:hover:not(.active) {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 100px;
+  height: 150px;
   width: 50%;
 
 }
@@ -151,6 +151,12 @@ a:hover:not(.active) {
   header {
     flex-wrap: wrap;
     float: none;
+    flex-direction: row-reverse;
+  }
+
+  .web-logo {
+    align-self: center;
+    left: 10px;
   }
 
   .content {

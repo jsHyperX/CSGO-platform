@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/handlers.js"></script>
     </head>
 
     <body>
@@ -32,27 +33,29 @@
                     <nav class="hero-text">
                         <h1 style="font-size: 20px"> Gamble your money and feel the pain </h1>
                         <h2> Login with Steam </h2>
-                        <button id="login" href="#steam"> <i class="fab fa-steam" style="font-size: 40px"></i> </button>
+                        <button id="login" onclick="redirect2steam()"> 
+                            <i class="fab fa-steam" style="font-size: 40px"></i>
+                        </button>
                     </nav>
                 </nav>
 
                 <nav class="flex-parent">
                     <nav id="c1"> 
                         <nav class="black">
-                            <img id="logo1" src="/home/cgi/workspaces/respWeb/assets/black.jpg" alt="black" />
+                            <img id="logo1" src='./assets/black.jpg' alt="black" />
                             <p style="text-align: center"> Win 2x</p>
                             <!-- <p><button class="black-bet"></button></p> -->
                         </nav>
                     </nav>
                     <nav id="c2">
                         <nav class="green">
-                            <img id="logo2" src="/home/cgi/workspaces/respWeb/assets/green.jpg" alt="green" />
+                            <img id="logo2" src="./assets/green.jpg" alt="green" />
                             <p style="text-align: center"> Win 14x</p>
                         </nav>
                     </nav>
                     <nav id="c3">
                         <nav class="red">
-                                <img id="logo3" src="/home/cgi/workspaces/respWeb/assets/red.png" alt="red" />
+                                <img id="logo3" src="./assets/red.png" alt="red" />
                                 <p style="text-align: center"> Win 2x</p>
                         </nav>
                     </nav>
