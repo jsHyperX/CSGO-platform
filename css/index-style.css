@@ -1,5 +1,5 @@
 html,body {
-    margin: 0;
+  margin: 0;
 }
 
 .wrapper {
@@ -11,45 +11,36 @@ html,body {
 }
 
 header {
-  top: 0;
-  left: 0;
-  float: left;
   display: flex;
-  flex-direction: row;
+  float: none;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   overflow: hidden;
-  margin: 0;
-  padding : 3px;
   flex: none;
   position: sticky;
   background-color: royalblue;
 }
+
 .web-logo {
   flex: 2;
   font-size: 40px;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .navbar {
   display: flex;
   align-self: flex-start;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
   flex: 6;
-}
-@media screen and (max-width: 660px) {
-  .navbar {
-    flex-direction: column;
-  }
 }
 
 a {
-  display: inline-block;
+  display: inline;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -70,11 +61,11 @@ a:hover:not(.active) {
 }
 
 .hero-image {
-  /* opacity: 0.95; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/home/cgi/workspaces/respWeb/favicon/gambling intro.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://dotesports-media-cdn-tqgiyve.stackpathdns.com/wp-content/uploads/2018/08/12044806/3a9a33895dd1897cc0be7272f6d2df22.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
 }
@@ -135,7 +126,6 @@ a:hover:not(.active) {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 150px;
   width: 50%;
 
 }
@@ -144,42 +134,32 @@ a:hover:not(.active) {
   flex: 5;
 }
 
-@media screen and (max-width: 600px) {
-  .flex-parent {
-    flex-direction: column;
-  }
-  header {
-    flex-wrap: wrap;
-    float: none;
-    flex-direction: row-reverse;
-  }
-  #c1,#c2,#c3 {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .web-logo {
-    align-self: center;
-    left: 10px;
-  }
-
-  .content {
-    float: none;
-  }
-  .hero-image {
-    width: 100%;
-    display: block;
-  }
-}
-
 footer {
   width: 100%;
-  flex: 0.8;
+  flex: 1 1;
   display: flex;
   flex-direction: row;
-  bottom: 0;
-  left: 0;
   justify-content: space-evenly;
-  height: 25px;
   background: chocolate;
+}
+
+@media only screen and (min-width: 769px) {
+  header,.navbar {
+    flex-direction: row;
+    float: left;
+  }
+  a {
+    padding: 14px 16px;
+  }
+
+}
+
+@media screen and (min-width: 426px) {
+  header,.navbar {
+    flex-direction: row;
+    float: left;
+  }
+  a {
+    padding: 14px 10px;
+  }
 }
