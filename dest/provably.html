@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Provably Fair : How it Works? </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/ico" href="./favicon/dice.jpeg" />
+        <link rel="icon" type="image/ico" href="./favicon/dice.jpeg" />
+        <link rel="stylesheet" type="text/css" href="./css/index-style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <style> 
+            html,body {
+                margin: 0;
+            }
+            .container {
+                background-image: url("http://www.hd-freeimages.com/uploads/large/plain-walls/color-background-surface-solid-hd-wallpaper.jpg");
+                background-repeat: repeat;
+                background-size: contain;
+                color: aliceblue;
+            }
+            header {
+                display: flex;
+                float: none;
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 100%;
+                overflow: auto;
+                position: sticky;
+                background-color: royalblue;
+                }
+
+                .web-logo {
+                flex: 2;
+                font-size: 40px;
+                align-self: center;
+                }
+
+                .navbar {
+                display: flex;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                align-self: flex-start;
+                justify-content: space-evenly;
+                flex-direction: column;
+                flex: 6;
+                }
+
+                .navbar a {
+                display: inline;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                }
+
+                .navbar a:hover:not(.active) {
+                background-color: #111;
+                }
+
+                .active {
+                background-color: #4CAF50;
+                }
+                @media only screen and (min-width: 769px) {
+                    header,.navbar {
+                        flex-direction: row;
+                        float: left;
+                    }
+                    a {
+                        padding: 14px 16px;
+                    }
+                }
+            </style>
+             <script src="./scripts/jquery.min.js"></script>
+             <script src="./scripts/handlers.js"></script>
+    </head>
+    <body>
+        <nav class="wrapper">
+            <header>
+                    <nav class="web-logo">
+                        <i class="fas fa-dice"></i>
+                    </nav>
+                    <nav class="navbar" id="navId">
+                        <a href="../index.html">Home</a>
+                        <a onclick="redirect2affiliates()"> Affiliates </a>
+                        <a class="active" onclick="redirect2provably()"> Provably Fair </a>
+                        <a onclick="redirect2faq()"> FAQ </a>
+                        <a onclick="redirect2support()"> Support </a>
+                        <a onclick="redirect2tos()"> Terms Of services </a>
+                        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </nav>
+                </header>
+        <nav class="container">
+            <div class="container"> <div class="starter-template"> <h1>What is "provably fair"?</h1>
+                <p>Players always fear to be cheated on an online casino. This is understandable because it is technically very easy for an online casino to just make you lose. In the Bitcoin gambling community we have a solution for this called "provably fair". Provably fair is a tool that enables you (the player) to verify each roll result and make sure you are not being cheated!</p>
+                <p>The easy way is to just use our provably fair verifiers, fill in the information the website is providing you and check the roll results. Our verifiers:</p>
+                <ul>
+                    <li><a href="https://dicesites.com/betking/verifier" style="color: aliceblue">BetKing verifier</a></li>
+                    <li><a href="https://dicesites.com/betterbets/verifier" style="color: aliceblue">BetterBets verifier</a></li>
+                    <li><a href="https://dicesites.com/bitdiceme/verifier"style="color: aliceblue">BitDice.me verifier</a></li>
+                    <li><a href="https://dicesites.com/bitsler/verifier" style="color: aliceblue">BitSler verifier</a></li>
+                    <li><a href="https://dicesites.com/coinroll/verifier" style="color: aliceblue">Coinroll verifier</a></li>
+                    <li><a href="https://dicesites.com/crypto-games/verifier" style="color: aliceblue">Crypto-Games.net verifier</a></li>
+                    <li><a href="https://dicesites.com/justdice/verifier" style="color: aliceblue">Just-Dice.com verifier</a></li>
+                    <li><a href="https://dicesites.com/nitrogendice/verifier" style="color: aliceblue">Nitrogen Dice verifier</a></li>
+                    <li><a href="https://dicesites.com/primedice/verifier" style="color: aliceblue">Primedice verifier</a></li>
+                    <li><a href="https://dicesites.com/rollin/verifier" style="color: aliceblue">Rollin verifier</a></li>
+                    <li><a href="https://dicesites.com/safedice/verifier" style="color: aliceblue">SafeDice verifier</a></li>
+                    <li><a href="https://dicesites.com/satoshidice/verifier" style="color: aliceblue">SatoshiDice.com verifier</a></li>
+                </ul>
+                <p>However I personally think it is better to fully understand how it works, so I will try to explain the provably fair method on this page.</p>
+                <h2>How does provably fair work?</h2>
+                <p>Although there are several implementations of the provably fair method, we will describe the most common one. With this method each roll-result is calculated by the following variables:</p>
+                <ul>
+                    <li><strong>Serverseed</strong> - provided by the gambling site</li>
+                    <li><strong>Clientseed</strong> - provided by your browser and adjusted by you</li>
+                    <li><strong>Nonce</strong> - A number that increases with each bet you make</li>
+                </ul>
+                <p>You will get an encrypted <strong>hash of the serverseed</strong> before you start gambling. Since you get it in advance, the site cannot change it later. However it is encrypted, so you cannot calculate your own roll results in advance (only afterwards if you get the unhashed serverseed.)</p>
+                <p>Your browser will generate a random <strong>clientseed</strong>. However, you could and should adjust this clientseed before you start. This way you can make sure the site does not know your clientseed in advance.</p>
+                <p>Now if you make a bet the <strong>nonce</strong> starts with 0 or 1 depending on the website. After each bet you make, the nonce number will go up by 1.</p>
+                <h2>Calculating the roll result</h2>
+                <p>A dice site uses 3 variables (server- &amp; clientseed and nonce) to calculate the roll result. I will illustrate this with an example, let's say we have these values:</p>
+                <pre>
+                    <img src="https://dicesites.com/images/provablyfair/seeds.png" alt="">
+                </pre>
+                <p>So this is:</p>
+                <pre>
+                    <strong>Clientseed:</strong> 
+                    ClientSeedForDiceSites.com
+                    <strong>Serverseed unhashed:</strong> 293d5d2ddd365f54759283a8097ab2640cbe6f8864adc2b1b31e65c14c999f04
+                    <strong>Serverseed hashed:</strong> 5ac59780d512265230d5efb3cc238886dc1b457a80b54fbf1f920b99c6505801
+                    <strong>Nonce:</strong> for the first bet it is 0 on this dice site (PrimeDice)
+                </pre>
+                <p>PrimeDice first calculates a HMAC hash with these variables, like this:</p>
+                <pre>
+                    hmac-sha512(server_seed, client_seed-nonce)
+                </pre>
+                <p>So in our case this becomes:</p>
+                <pre>hmac-sha512(293d5d2ddd365f54759283a8097ab2640cbe6f8864adc2b1b31e65c14c999f04, ClientSeedForDiceSites.com-0)</pre>
+                <p>You could use a online tool like <a href="http://www.freeformatter.com/hmac-generator.html" style="color: aliceblue" rel="nofollow" target="_blank">freeformatter.com/hmac-generator.html</a> to calculate the outcome of that, like this:</p>
+                <pre><img src="https://dicesites.com/images/provablyfair/hmac.png" alt=""></pre>
+                <p>Calculated outcome:
+                </p><pre><mark>aa671</mark>aad5e4565ebffb8dc5c185e4df1ae6d9aca2578b5c03ec9c7750f881922276d8044e5e3d84f158ce411f667e224e9b0c1ac50fc94e9c5eb883a678f6ca2</pre>
+                Now the first 5 characters are being used (aa671) and converted from hexadecimal to a decimal. You can do this also with an online tool like <a href="http://www.statman.info/conversions/hexadecimal.html" rel="nofollow" target="_blank">statman.info/conversions/hexadecimal.html</a><p></p>
+                <pre><img src="https://dicesites.com/images/provablyfair/decimal.png" alt=""></pre>
+                <p>If this number is over 999,999 than the next 5 characters (aad5e) would be used. But in our case it's 697,969 so this will be used. Now you only have to apply a modulus of 10^4 and divide it by 100. You can do this just on <a href="https://www.google.com" rel="nofollow" target="_blank">Google</a> by typing:</p>
+                <pre>697969%(10000)/100</pre>
+                <p>The final result is:</p>
+                <blockquote>79.69</blockquote>
+                <p>This is the same roll result PrimeDice created:</p>
+                <pre><img src="https://dicesites.com/images/provablyfair/roll.png" alt=""></pre>
+                <p>For the second bet the dice site would do exactly the same but change the nonce from 0 to 1 (and after that to 2, etc.) This generates a complete different and random outcome each time you bet.</p>
+                <h2>Verifying your roll results</h2>
+                <p>You do not get the unhashed serverseed in advance, because that would allow you to generate all the rolls in advance (and win everything ;-).) So what you should do is generate a new hashed serverseed after your gambling session, this will reveal the old unhashed serverseed - that was being used for your gambling session. Verifying to check if you have been cheated would include 2 steps:</p>
+                <h3>Step 1</h3>
+                <p>First make sure the hashed serverseed you got, is really the hash of the unhashed serverseed. Otherwise they could just give you a random hash and still create fake outcomes. Let's look at our previous serverseed:</p>
+                <pre><strong>Serverseed unhashed:</strong> 293d5d2ddd365f54759283a8097ab2640cbe6f8864adc2b1b31e65c14c999f04
+                <strong>Serverseed hashed:</strong> 5ac59780d512265230d5efb3cc238886dc1b457a80b54fbf1f920b99c6505801</pre>
+                <p>Again you can use an online tool (<a href="http://www.xorbin.com/tools/sha256-hash-calculator" style="color: aliceblue" rel="nofollow" target="_blank">xorbin.com/tools/sha256-hash-calculator</a>) to generate a SHA256 hash of the unhashed serverseed:</p>
+                <pre><img src="https://dicesites.com/images/provablyfair/serverseed.png" alt=""></pre>
+                <p>As you can see, the hash we got before we started to gamble, is really the serverseed that was used for the roll outcomes.</p>
+                <h3>Step 2</h3>
+                <p>Step 2 is to generate each roll result yourself and compare them to the rolls you made on the website. This is basically the same as we did at "Calculating the roll result".</p>
+                <h3>Verify both steps - the easy way</h3>
+                <p>Because you probably made tens, hundreds or even thousands of bets, it is not very simple to do verify it all manually again. Therefore you should use a <strong>provably fair verifier</strong>. We made verifiers for the most popular dice websites that should allow you to very easily verify the rolls you made. You only have to provide the several seeds and number of bets you made, and the verifier will check the serverseed hash and give you a list of all rolls.</p>
+                <p>For example, if we fill in all the variables in our PrimeDice verifier, we get the following result:</p>
+                <pre><img src="https://dicesites.com/images/provablyfair/verifier.png" alt=""></pre>
+                <p>I will then compare these results with the bets I actually made to see if I was cheated or not:</p>
+                <pre><img src="https://dicesites.com/images/provablyfair/rolls.png" alt=""></pre>
+                <p>Luckily, the results are exactly the same and I know I have not been cheated while gambling :-)</p>
+                <h2>Provably Fair verifiers</h2>
+                <ul>
+                <li><a href="https://dicesites.com/betking/verifier" style="color: aliceblue">BetKing verifier</a></li>
+                <li><a href="https://dicesites.com/betterbets/verifier" style="color: aliceblue">BetterBets verifier</a></li>
+                <li><a href="https://dicesites.com/bitdiceme/verifier" style="color: aliceblue">BitDice.me verifier</a></li>
+                <li><a href="https://dicesites.com/bitsler/verifier" style="color: aliceblue">BitSler verifier</a></li>
+                <li><a href="https://dicesites.com/coinroll/verifier" style="color: aliceblue">Coinroll verifier</a></li>
+                <li><a href="https://dicesites.com/crypto-games/verifier" style="color: aliceblue">Crypto-Games.net verifier</a></li>
+                <li><a href="https://dicesites.com/justdice/verifier" style="color: aliceblue">Just-Dice.com verifier</a></li>
+                <li><a href="https://dicesites.com/nitrogendice/verifier" style="color: aliceblue">Nitrogen Dice verifier</a></li>
+                <li><a href="https://dicesites.com/primedice/verifier" style="color: aliceblue">Primedice verifier</a></li>
+                <li><a href="https://dicesites.com/rollin/verifier" style="color: aliceblue">Rollin verifier</a></li>
+                <li><a href="https://dicesites.com/safedice/verifier" style="color: aliceblue">SafeDice verifier</a></li>
+                <li><a href="https://dicesites.com/satoshidice/verifier" style="color: aliceblue">SatoshiDice.com verifier</a></li>
+                </ul>
+                </div> <div class="footer"> <p>© DiceSites.com 2018 - <a href="https://bitcointalk.org/index.php?topic=877078" style="color: aliceblue" target="_blank">Our bitcointalk.org topic</a> - <a href="https://dicesites.com/terms">Terms</a> - <a href="https://dicesites.com/privacy">Privacy policy</a></p> </div> </div>
+        </nav>
+        </nav>
+    </body>
+</html>
