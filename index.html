@@ -4,12 +4,14 @@
 
     <head>
         <title> firiCSGOskins </title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="icon" type="image/ico" href="./favicon/dice.jpeg" />
         <link rel="stylesheet" type="text/css" href="./css/index-style.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <script src="./scripts/jquery.min.js"></script>
+        <script src="./scripts/redirect.js"></script>
         <script src="./scripts/handlers.js"></script>
     </head>
 
@@ -26,7 +28,7 @@
                     <a onclick="redirect2faq()"> FAQ </a>
                     <a onclick="redirect2support()"> Support </a>
                     <a onclick="redirect2tos()"> Terms Of services </a>
-                    <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                    <a href="javascript:void();" class="icon" onclick="hamburger()">
                         <i class="fa fa-bars"></i>
                     </a>
                 </nav>
@@ -35,8 +37,8 @@
             <nav class="content">                
                 <nav class="hero-image">
                     <nav class="hero-text">
-                        <h1 style="font-size:4vw"> Gamble your money and feel the pain </h1>
-                        <h2 style="font-size:4vw"> Login with Steam </h2>
+                        <h2 style="font-size:4vw"> Gamble your money and feel the pain </h2>
+                        <h3 style="font-size:4vw"> Login with Steam </h3>
                         <button id="login" onclick="redirect2steam()"> 
                             <i class="fab fa-steam"></i>
                         </button>
@@ -54,7 +56,6 @@
                         </nav>>
                     </nav>
                 </nav>
-                <p style="text-align: center">
                 <button class="button" onclick="spinner()">spin</button>
 
                 <nav class="flex-parent">
@@ -81,14 +82,9 @@
                     </nav>
                 </nav>
             </nav>
-            <!-- <nav class="roulette-container">
-                <nav class="roulette" style="display:none;"> 
-                    <a class="ct"> <img src="../favicon/ct-logo.png" alt="ct logo" /> </a>
-                    <a class="t"> <img src="../favicon/t-logo.png" alt="t logo"/> </a>
-                </nav>
-            </nav>  -->
+            
             <footer> 
-                <h3 style="font-size: 3vw;margin: 10px;"> Connect with us at : </h3>
+                <h3 style="font-size: 5vw;margin: 20px;"> Connect with us at : </h3>
                 <i class="fab fa-steam" style="font-size: 5vh; align-self: center"></i>
                 <i class="fab fa-facebook-f" style="font-size: 5vh; align-self: center"></i>
                 <i class="fab fa-twitter-square" style="font-size: 5vh; align-self: center"></i>
