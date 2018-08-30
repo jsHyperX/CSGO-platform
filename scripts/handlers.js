@@ -9,13 +9,13 @@ function hamburger() {
 function spinner() {
 // $(document).ready(function () {
 	for (i = 0; i < 1; i++) {
-		$(".list li").clone().appendTo(".list");
+		$(".list a").clone().appendTo(".list");
 	}
 	$('.button').click(function () {
 		$('.window').css({
 			right: "0"
 		})
-		$('.list li').css({
+		$('.list a').css({
 			border: '4px solid transparent'
 		})
 		
@@ -23,7 +23,7 @@ function spinner() {
 			return Math.floor(Math.random() * (max - min + 1)) + min;
 		}
 		var x = selfRandom(3, 10);
-		$('.list li:eq('+x+')').css({
+		$('.list a:eq('+x+')').css({
 			border:'4px solid #00ba00'
 		})
 		$('.window').animate({

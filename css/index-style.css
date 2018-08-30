@@ -263,7 +263,10 @@ footer {
   .fa-steam {
     font-size: 4vw;
   }
-
+  footer h3 {
+    font-size: 3vw;
+    margin: 15px;
+  }
 }
 
 @media screen and (min-width: 426px) {
@@ -282,11 +285,15 @@ footer {
     font-size: 5vw;
     border-radius: 2vw;
   }
+
+  footer h3 {
+    font-size: 3vw;
+  }
   .fa-steam {
     font-size: 4vw;
   }
 
-  .list li img {
+  .list a img {
     width: auto;
     height: auto;
   }
