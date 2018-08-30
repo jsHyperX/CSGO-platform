@@ -1,6 +1,5 @@
 html,body {
   margin: 0;
-  position: relative;
 }
 
 .wrapper {
@@ -8,7 +7,6 @@ html,body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: fixed;
 }
 
 header {
@@ -55,7 +53,6 @@ header {
 
 .content {
   float: none;
-  height: 1000px;
   width: 100%;
   overflow: auto;
   flex: 7.2;
@@ -64,8 +61,9 @@ header {
 
 .hero-image {
   background-image:url("https://dotesports-media-cdn-tqgiyve.stackpathdns.com/wp-content/uploads/2018/08/12044806/3a9a33895dd1897cc0be7272f6d2df22.jpg");
-  height: 600px;
+  min-height: 65vh;
   width: 100%;
+  flex: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,17 +79,18 @@ header {
   color: white;
 }
 
-.hero-text button {
+.hero-text #login {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 0.5vw 10vw;
-  font-size: 7vw;
-  overflow: auto;
+  flex: 1;
+  overflow: hidden;
   color: black;
   border-radius: 10vw;
   background-color: #ddd;
   text-align: center;
+  position: relative;
   cursor: pointer;
 }
 
@@ -238,34 +237,40 @@ header {
 footer {
   display: flex;
   width: 100%;
-  text-align: justify;
-  flex: 1;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background: chocolate;
 }
 
-@media only screen and (min-width: 769px) {
+footer > i {
+  align-self: center;
+}
+@media screen and (min-width: 769px) {
+  
   header,.navbar {
     flex-direction: row;
     float: left;
   }
+
   a {
     padding: 14px 16px;
   }
+
   .hero-image {
-    height: 100%;
+    min-height: 80vh;
   }
-  .hero-text button {
-    font-size: 5vw;
-    border-radius: 5vw;
-  }
+
   .fa-steam {
     font-size: 4vw;
   }
+
   footer h3 {
-    font-size: 3vw;
+    font-size: 10px;
     margin: 15px;
+  }
+
+  footer i {
+    font-size: 60px;
   }
 }
 
