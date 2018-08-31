@@ -55,7 +55,7 @@ header {
   float: none;
   width: 100%;
   overflow: auto;
-  flex: 7.2;
+  flex: 7;
   background: ghostwhite;
 }
 
@@ -236,7 +236,6 @@ header {
 
 footer {
   display: flex;
-  width: 100%;
   flex-direction: row;
   justify-content: space-around;
   background: chocolate;
@@ -244,7 +243,9 @@ footer {
 
 footer > i {
   align-self: center;
+  font-size: 5vh;
 }
+
 @media screen and (min-width: 769px) {
   
   header,.navbar {
